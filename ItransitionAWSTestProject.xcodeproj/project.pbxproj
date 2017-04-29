@@ -29,6 +29,7 @@
 		E2B491561EB47C0900DA6D34 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491551EB47C0900DA6D34 /* SignInViewController.swift */; };
 		E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */; };
 		E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */; };
+		EA1AD4F51EB4A09200EDB4AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AD4F41EB4A09200EDB4AF /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		E2B491551EB47C0900DA6D34 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EA1AD4F41EB4A09200EDB4AF /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Service/AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				E2772F7D1EB3342C00A3EC9C /* Assets.xcassets */,
 				E2772F7F1EB3342C00A3EC9C /* LaunchScreen.storyboard */,
 				E2772F821EB3342C00A3EC9C /* Info.plist */,
+				EA1AD4F41EB4A09200EDB4AF /* AuthService.swift */,
 			);
 			path = ItransitionAWSTestProject;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */,
 				E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */,
 				E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */,
+				EA1AD4F51EB4A09200EDB4AF /* AuthService.swift in Sources */,
 				E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */,
 				E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */,
 			);

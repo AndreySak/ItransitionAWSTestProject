@@ -23,31 +23,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-b3-kp8">
-                                <rect key="frame" x="94" y="228.5" width="187.5" height="210"/>
+                                <rect key="frame" x="94" y="211" width="187.5" height="245.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-7M-K6i">
+                                        <rect key="frame" x="48.5" y="0.0" width="91" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-NJ-0bh">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="187.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugf-lq-hNw">
-                                        <rect key="frame" x="0.0" y="45" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="187.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq1-UB-be1">
-                                        <rect key="frame" x="0.0" y="90" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="125.5" width="187.5" height="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="logInAction" destination="E6w-Xa-l4m" eventType="touchUpInside" id="PqN-Up-gbv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-p9-EQv">
-                                        <rect key="frame" x="0.0" y="135" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="170.5" width="187.5" height="30"/>
                                         <state key="normal" title="Forgot password"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rk6-QV-IVz">
-                                        <rect key="frame" x="0.0" y="180" width="187.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="187.5" height="30"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="signUpAction" destination="E6w-Xa-l4m" eventType="touchUpInside" id="nwW-Ol-5Dw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -65,6 +77,11 @@
                             <constraint firstItem="5JF-b3-kp8" firstAttribute="centerX" secondItem="hfo-0Y-iip" secondAttribute="centerX" id="enU-tk-ljJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="ObV-7M-K6i" id="aJL-hr-qgT"/>
+                        <outlet property="passwordField" destination="Ugf-lq-hNw" id="2Dq-ZT-fLE"/>
+                        <outlet property="usernameField" destination="3jd-NJ-0bh" id="FCz-Be-X22"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdZ-N9-ACY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
