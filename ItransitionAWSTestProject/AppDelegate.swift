@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
     }
@@ -26,6 +25,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AWSMobileClient.sharedInstance.applicationDidBecomeActive(application)
     }
 
-
 }
-

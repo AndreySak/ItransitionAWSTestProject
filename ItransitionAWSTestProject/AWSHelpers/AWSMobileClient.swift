@@ -102,7 +102,8 @@ class AWSMobileClient: NSObject {
         AWSCognitoUserPoolsSignInProvider.setupUserPool(withId: AWSCognitoUserPoolId, cognitoIdentityUserPoolAppClientId: AWSCognitoUserPoolAppClientId, cognitoIdentityUserPoolAppClientSecret: AWSCognitoUserPoolClientSecret, region: AWSCognitoUserPoolRegion)
         
         AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
-        AWSIdentityProfileManager.sharedInstance().register(UserPoolsIdentityProfile.sharedInstance(), forProviderKey: AWSCognitoUserPoolsSignInProvider.sharedInstance().identityProviderName)
+//        AWSIdentityProfileManager.sharedInstance().register(UserPoolsIdentityProfile.sharedInstance(),
+//                                                            forProviderKey: AWSCognitoUserPoolsSignInProvider.sharedInstance().identityProviderName)
     
     }
     

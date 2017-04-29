@@ -18,9 +18,13 @@
 		E2772F7C1EB3342C00A3EC9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2772F7A1EB3342C00A3EC9C /* Main.storyboard */; };
 		E2772F7E1EB3342C00A3EC9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2772F7D1EB3342C00A3EC9C /* Assets.xcassets */; };
 		E2772F811EB3342C00A3EC9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2772F7F1EB3342C00A3EC9C /* LaunchScreen.storyboard */; };
-		E2B4913D1EB4728E00DA6D34 /* AWSHelpers in Resources */ = {isa = PBXBuildFile; fileRef = E2B4913C1EB4728E00DA6D34 /* AWSHelpers */; };
 		E2B491401EB477EF00DA6D34 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B4913F1EB477EF00DA6D34 /* libsqlite3.tbd */; };
 		E2B491421EB477FC00DA6D34 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B491411EB477FC00DA6D34 /* libz.tbd */; };
+		E2B4914C1EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B491451EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework */; };
+		E2B4914D1EB479EB00DA6D34 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491461EB479EB00DA6D34 /* AWSConfiguration.swift */; };
+		E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */; };
+		E2B4914F1EB479EB00DA6D34 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B491481EB479EB00DA6D34 /* AWSMobileHubHelper.framework */; };
+		E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,9 +54,13 @@
 		E2772F7D1EB3342C00A3EC9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2772F801EB3342C00A3EC9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2772F821EB3342C00A3EC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2B4913C1EB4728E00DA6D34 /* AWSHelpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AWSHelpers; sourceTree = "<group>"; };
 		E2B4913F1EB477EF00DA6D34 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		E2B491411EB477FC00DA6D34 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E2B491451EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognitoUserPoolsSignIn.framework; sourceTree = "<group>"; };
+		E2B491461EB479EB00DA6D34 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		E2B491481EB479EB00DA6D34 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatedItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,8 @@
 				E21141771EB3436A00E849EB /* AWSCognitoIdentityProvider.framework in Frameworks */,
 				E211417B1EB3436A00E849EB /* AWSDynamoDB.framework in Frameworks */,
 				E21141791EB3436A00E849EB /* AWSCore.framework in Frameworks */,
+				E2B4914F1EB479EB00DA6D34 /* AWSMobileHubHelper.framework in Frameworks */,
+				E2B4914C1EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +112,7 @@
 		E2772F751EB3342C00A3EC9C /* ItransitionAWSTestProject */ = {
 			isa = PBXGroup;
 			children = (
-				E2B4913C1EB4728E00DA6D34 /* AWSHelpers */,
+				E2B491441EB479EB00DA6D34 /* AWSHelpers */,
 				E2772F761EB3342C00A3EC9C /* AppDelegate.swift */,
 				E2772F781EB3342C00A3EC9C /* ViewController.swift */,
 				E2772F7A1EB3342C00A3EC9C /* Main.storyboard */,
@@ -120,6 +130,34 @@
 				E2B4913F1EB477EF00DA6D34 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2B491441EB479EB00DA6D34 /* AWSHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E2B491451EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework */,
+				E2B491461EB479EB00DA6D34 /* AWSConfiguration.swift */,
+				E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */,
+				E2B491481EB479EB00DA6D34 /* AWSMobileHubHelper.framework */,
+				E2B491491EB479EB00DA6D34 /* Models */,
+			);
+			path = AWSHelpers;
+			sourceTree = "<group>";
+		};
+		E2B491491EB479EB00DA6D34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4914A1EB479EB00DA6D34 /* NoSQL */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2B4914A1EB479EB00DA6D34 /* NoSQL */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */,
+			);
+			path = NoSQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B4913D1EB4728E00DA6D34 /* AWSHelpers in Resources */,
 				E2772F811EB3342C00A3EC9C /* LaunchScreen.storyboard in Resources */,
 				E2772F7E1EB3342C00A3EC9C /* Assets.xcassets in Resources */,
 				E2772F7C1EB3342C00A3EC9C /* Main.storyboard in Resources */,
@@ -215,7 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2772F791EB3342C00A3EC9C /* ViewController.swift in Sources */,
+				E2B4914D1EB479EB00DA6D34 /* AWSConfiguration.swift in Sources */,
+				E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */,
 				E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */,
+				E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +383,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ItransitionAWSTestProject-integration-lib-aws-my-sample-app-ios-swift/Sdk/Aws",
 					"$(PROJECT_DIR)/ItransitionAWSTestProject-integration-lib-aws-my-sample-app-ios-swift-2/Sdk/Aws",
+					"$(PROJECT_DIR)/ItransitionAWSTestProject/AWSHelpers",
 				);
 				INFOPLIST_FILE = ItransitionAWSTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -361,6 +402,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ItransitionAWSTestProject-integration-lib-aws-my-sample-app-ios-swift/Sdk/Aws",
 					"$(PROJECT_DIR)/ItransitionAWSTestProject-integration-lib-aws-my-sample-app-ios-swift-2/Sdk/Aws",
+					"$(PROJECT_DIR)/ItransitionAWSTestProject/AWSHelpers",
 				);
 				INFOPLIST_FILE = ItransitionAWSTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
