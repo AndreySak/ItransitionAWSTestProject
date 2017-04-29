@@ -25,6 +25,10 @@
 		E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */; };
 		E2B4914F1EB479EB00DA6D34 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B491481EB479EB00DA6D34 /* AWSMobileHubHelper.framework */; };
 		E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */; };
+		E2B491541EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491531EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift */; };
+		E2B491561EB47C0900DA6D34 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491551EB47C0900DA6D34 /* SignInViewController.swift */; };
+		E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */; };
+		E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +65,10 @@
 		E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
 		E2B491481EB479EB00DA6D34 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
 		E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatedItems.swift; sourceTree = "<group>"; };
+		E2B491531EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPoolsIdentityProfile.swift; sourceTree = "<group>"; };
+		E2B491551EB47C0900DA6D34 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 		E2772F751EB3342C00A3EC9C /* ItransitionAWSTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				E2B491511EB47B1500DA6D34 /* SignIn */,
 				E2B491441EB479EB00DA6D34 /* AWSHelpers */,
 				E2772F761EB3342C00A3EC9C /* AppDelegate.swift */,
 				E2772F781EB3342C00A3EC9C /* ViewController.swift */,
@@ -158,6 +167,25 @@
 				E2B4914B1EB479EB00DA6D34 /* RatedItems.swift */,
 			);
 			path = NoSQL;
+			sourceTree = "<group>";
+		};
+		E2B491511EB47B1500DA6D34 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				E2B491521EB47B1500DA6D34 /* UserPools */,
+				E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */,
+				E2B491551EB47C0900DA6D34 /* SignInViewController.swift */,
+				E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		E2B491521EB47B1500DA6D34 /* UserPools */ = {
+			isa = PBXGroup;
+			children = (
+				E2B491531EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift */,
+			);
+			path = UserPools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B491561EB47C0900DA6D34 /* SignInViewController.swift in Sources */,
+				E2B491541EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift in Sources */,
 				E2772F791EB3342C00A3EC9C /* ViewController.swift in Sources */,
 				E2B4914D1EB479EB00DA6D34 /* AWSConfiguration.swift in Sources */,
+				E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */,
+				E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */,
 				E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */,
 				E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */,
 				E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */,
