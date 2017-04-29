@@ -10,7 +10,6 @@ import Foundation
 import AWSCognitoUserPoolsSignIn
 
 class AuthService: NSObject {
-    fileprivate var passwordAuthenticationCompletion: AWSTaskCompletionSource<AnyObject>?
 
     fileprivate var username: String = ""
     fileprivate var password: String = ""
