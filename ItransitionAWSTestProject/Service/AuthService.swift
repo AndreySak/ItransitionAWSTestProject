@@ -10,11 +10,12 @@ import Foundation
 import AWSCognitoUserPoolsSignIn
 
 class AuthService: NSObject {
+    static let sharedInstance = AuthService()
 
     fileprivate var username: String = ""
     fileprivate var password: String = ""
 
-    init(username: String, password: String) {
+    public func configure(with username: String, andPassword password: String) {
         self.username = username
         self.password = password
     }
@@ -26,7 +27,7 @@ extension AuthService: AWSCognitoIdentityInteractiveAuthenticationDelegate {
     func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
         return self
     }
-    
+
 }
 
 extension AuthService: AWSCognitoIdentityPasswordAuthentication {
