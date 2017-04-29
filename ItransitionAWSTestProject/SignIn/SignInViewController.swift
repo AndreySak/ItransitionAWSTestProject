@@ -14,10 +14,6 @@ class SignInViewController: UIViewController {
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AnyObject>?
 
     override func viewDidLoad() {
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1_oAXrga09j")
-        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
-
         AWSCognitoUserPoolsSignInProvider.sharedInstance().setInteractiveAuthDelegate(AuthService(username: "tester", password: "12345678"))
 
         super.viewDidLoad()
