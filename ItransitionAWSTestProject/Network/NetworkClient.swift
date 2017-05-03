@@ -42,20 +42,20 @@ class NetworkClient {
 
     func request(urlString: String, method: HTTPMethod, parameters: [String: String]) -> AWSTask<AWSAPIGatewayResponse> {
 
-        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+       // let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
 
         // Construct the request object
         let apiRequest = AWSAPIGatewayRequest(httpMethod: method.rawValue,
                                               urlString: urlString,
                                               queryParameters: nil,
                                               headerParameters: httpHeaders,
-                                              httpBody: httpBody)
+                                              httpBody: nil)
 
         return manager.invoke(apiRequest)
     }
 
     func get(urlString: String, success: @escaping success<String>, failure: @escaping failure<Error>) {
-        self.request(urlString: urlString, method: .post, parameters: [:]).continueWith { (task: AWSTask<AWSAPIGatewayResponse>) -> Any? in
+        self.request(urlString: urlString, method: .get, parameters: [:]).continueWith { (task: AWSTask<AWSAPIGatewayResponse>) -> Any? in
 
             if let error = task.error {
                 print("Error occurred: \(error)")
@@ -65,8 +65,9 @@ class NetworkClient {
 
             // Handle successful result here
             let result = task.result!
-            //let responseString = String(data: result.responseData!, encoding: .utf8)
+            let responseString = String(data: result.responseData!, encoding: .utf8)
 
+            print(responseString)
             success(String(result.statusCode))
                 
             return nil
