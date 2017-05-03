@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E21141771EB3436A00E849EB /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21141741EB3436A00E849EB /* AWSCognitoIdentityProvider.framework */; };
 		E21141781EB3436A00E849EB /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E21141741EB3436A00E849EB /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E21141791EB3436A00E849EB /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21141751EB3436A00E849EB /* AWSCore.framework */; };
-		E211417A1EB3436A00E849EB /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E21141751EB3436A00E849EB /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E211417B1EB3436A00E849EB /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21141761EB3436A00E849EB /* AWSDynamoDB.framework */; };
 		E211417C1EB3436A00E849EB /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E21141761EB3436A00E849EB /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2772F761EB3342C00A3EC9C /* AppDelegate.swift */; };
@@ -30,6 +28,13 @@
 		E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */; };
 		E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */; };
 		EA1AD4F51EB4A09200EDB4AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AD4F41EB4A09200EDB4AF /* AuthService.swift */; };
+		EA7D6DDD1EB9EE3E00F01BD9 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D6DDC1EB9EE3E00F01BD9 /* AWSAPIGateway.framework */; };
+		EA7D6DDE1EB9EE3E00F01BD9 /* AWSAPIGateway.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D6DDC1EB9EE3E00F01BD9 /* AWSAPIGateway.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA7D6DDF1EB9EE9900F01BD9 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21141751EB3436A00E849EB /* AWSCore.framework */; };
+		EA7D6DE01EB9EE9900F01BD9 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E21141751EB3436A00E849EB /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA7D6DE91EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE41EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m */; };
+		EA7D6DEA1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE61EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m */; };
+		EA7D6DEB1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,8 +45,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E21141781EB3436A00E849EB /* AWSCognitoIdentityProvider.framework in Embed Frameworks */,
+				EA7D6DE01EB9EE9900F01BD9 /* AWSCore.framework in Embed Frameworks */,
 				E211417C1EB3436A00E849EB /* AWSDynamoDB.framework in Embed Frameworks */,
-				E211417A1EB3436A00E849EB /* AWSCore.framework in Embed Frameworks */,
+				EA7D6DDE1EB9EE3E00F01BD9 /* AWSAPIGateway.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +77,14 @@
 		E2B491571EB47C6900DA6D34 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		E2B4915B1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EA1AD4F41EB4A09200EDB4AF /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Service/AuthService.swift; sourceTree = "<group>"; };
+		EA7D6DDC1EB9EE3E00F01BD9 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAPIGateway.framework; path = "ItransitionAWSTestProject-integration-lib-aws-my-sample-app-ios-swift-2/Sdk/Aws/AWSAPIGateway.framework"; sourceTree = "<group>"; };
+		EA7D6DE21EB9EF5900F01BD9 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		EA7D6DE31EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_XLR0MEGJXL_RequestSchema.h; sourceTree = "<group>"; };
+		EA7D6DE41EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_XLR0MEGJXL_RequestSchema.m; sourceTree = "<group>"; };
+		EA7D6DE51EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_XLR0MEGJXL_ResponseSchema.h; sourceTree = "<group>"; };
+		EA7D6DE61EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_XLR0MEGJXL_ResponseSchema.m; sourceTree = "<group>"; };
+		EA7D6DE71EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_XLR0MEGJXL_StatusMobileHubClient.h; sourceTree = "<group>"; };
+		EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +93,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B491421EB477FC00DA6D34 /* libz.tbd in Frameworks */,
+				EA7D6DDF1EB9EE9900F01BD9 /* AWSCore.framework in Frameworks */,
 				E2B491401EB477EF00DA6D34 /* libsqlite3.tbd in Frameworks */,
+				EA7D6DDD1EB9EE3E00F01BD9 /* AWSAPIGateway.framework in Frameworks */,
 				E21141771EB3436A00E849EB /* AWSCognitoIdentityProvider.framework in Frameworks */,
 				E211417B1EB3436A00E849EB /* AWSDynamoDB.framework in Frameworks */,
-				E21141791EB3436A00E849EB /* AWSCore.framework in Frameworks */,
 				E2B4914F1EB479EB00DA6D34 /* AWSMobileHubHelper.framework in Frameworks */,
 				E2B4914C1EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework in Frameworks */,
 			);
@@ -104,6 +119,7 @@
 		E2772F6A1EB3342C00A3EC9C = {
 			isa = PBXGroup;
 			children = (
+				EA7D6DDC1EB9EE3E00F01BD9 /* AWSAPIGateway.framework */,
 				E211417D1EB343E800E849EB /* AWS */,
 				E2772F751EB3342C00A3EC9C /* ItransitionAWSTestProject */,
 				E2772F741EB3342C00A3EC9C /* Products */,
@@ -147,6 +163,8 @@
 		E2B491441EB479EB00DA6D34 /* AWSHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				EA7D6DE11EB9EF5900F01BD9 /* Api */,
+				EA7D6DE21EB9EF5900F01BD9 /* Bridging_Header.h */,
 				E2B491451EB479EB00DA6D34 /* AWSCognitoUserPoolsSignIn.framework */,
 				E2B491461EB479EB00DA6D34 /* AWSConfiguration.swift */,
 				E2B491471EB479EB00DA6D34 /* AWSMobileClient.swift */,
@@ -189,6 +207,19 @@
 				E2B491531EB47B1500DA6D34 /* UserPoolsIdentityProfile.swift */,
 			);
 			path = UserPools;
+			sourceTree = "<group>";
+		};
+		EA7D6DE11EB9EF5900F01BD9 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EA7D6DE31EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.h */,
+				EA7D6DE41EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m */,
+				EA7D6DE51EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.h */,
+				EA7D6DE61EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m */,
+				EA7D6DE71EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.h */,
+				EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +318,13 @@
 				E2772F791EB3342C00A3EC9C /* ViewController.swift in Sources */,
 				E2B4914D1EB479EB00DA6D34 /* AWSConfiguration.swift in Sources */,
 				E2B491581EB47C6900DA6D34 /* CreateAccountViewController.swift in Sources */,
+				EA7D6DEA1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m in Sources */,
 				E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */,
 				E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */,
 				EA1AD4F51EB4A09200EDB4AF /* AuthService.swift in Sources */,
+				EA7D6DEB1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m in Sources */,
 				E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */,
+				EA7D6DE91EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m in Sources */,
 				E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sagittarius.ItransitionAWSTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ItransitionAWSTestProject/AWSHelpers/Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -444,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sagittarius.ItransitionAWSTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ItransitionAWSTestProject/AWSHelpers/Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

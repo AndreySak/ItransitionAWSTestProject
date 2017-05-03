@@ -8,6 +8,7 @@
 
 import UIKit
 import AWSCognitoUserPoolsSignIn
+import AWSAPIGateway
 
 class SignInViewController: UIViewController {
 
@@ -62,6 +63,49 @@ class SignInViewController: UIViewController {
         }
     }
 
+    @IBAction func apiAction() {
+        let httpMethodName = "POST"
+        let URLString = "/status"
+        let queryStringParameters = ["key1":"value1"]
+        let headerParameters = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
+
+        // Construct the request object
+        let apiRequest = AWSAPIGatewayRequest(httpMethod: httpMethodName,
+                                              urlString: URLString,
+                                              queryParameters: queryStringParameters,
+                                              headerParameters: headerParameters,
+                                              httpBody: httpBody)
+
+        // Fetch the Cloud Logic client to be used for invocation
+        // Change the `AWSAPI_XE21FG_MyCloudLogicClient` class name to the client class for your generated SDK
+        let serviceConfiguration = AWSServiceConfiguration(region: AWSCloudLogicDefaultRegion, credentialsProvider: AWSIdentityManager.default().credentialsProvider)
+
+        AWSAPI_XLR0MEGJXL_StatusMobileHubClient.register(with: serviceConfiguration!, forKey: AWSCloudLogicDefaultConfigurationKey)
+
+        let invocationClient = AWSAPI_XLR0MEGJXL_StatusMobileHubClient(forKey: AWSCloudLogicDefaultConfigurationKey)
+
+        invocationClient.invoke(apiRequest).continueWith { (task: AWSTask<AWSAPIGatewayResponse>) -> Any? in
+
+            if let error = task.error {
+                print("Error occurred: \(error)")
+                // Handle error here
+                return nil
+            }
+
+            // Handle successful result here
+            let result = task.result!
+            let responseString = String(data: result.responseData!, encoding: .utf8)
+
+            print(responseString)
+            print(result.statusCode)
+            
+            return nil
+        }
+    }
 
     
 
