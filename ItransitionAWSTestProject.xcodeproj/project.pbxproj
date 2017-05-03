@@ -35,6 +35,8 @@
 		EA7D6DE91EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE41EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m */; };
 		EA7D6DEA1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE61EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m */; };
 		EA7D6DEB1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */; };
+		EA7D6DF11EBA0E6700F01BD9 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DED1EBA06A400F01BD9 /* NetworkClient.swift */; };
+		EA7D6DF21EBA0E7300F01BD9 /* StatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D6DEF1EBA09A200F01BD9 /* StatusService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +87,8 @@
 		EA7D6DE61EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_XLR0MEGJXL_ResponseSchema.m; sourceTree = "<group>"; };
 		EA7D6DE71EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSAPI_XLR0MEGJXL_StatusMobileHubClient.h; sourceTree = "<group>"; };
 		EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m; sourceTree = "<group>"; };
+		EA7D6DED1EBA06A400F01BD9 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Network/NetworkClient.swift; sourceTree = "<group>"; };
+		EA7D6DEF1EBA09A200F01BD9 /* StatusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusService.swift; path = Network/StatusService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		E2772F751EB3342C00A3EC9C /* ItransitionAWSTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				EA7D6DEC1EBA067400F01BD9 /* Network */,
 				E2B491511EB47B1500DA6D34 /* SignIn */,
 				E2B491441EB479EB00DA6D34 /* AWSHelpers */,
 				E2772F761EB3342C00A3EC9C /* AppDelegate.swift */,
@@ -220,6 +225,15 @@
 				EA7D6DE81EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		EA7D6DEC1EBA067400F01BD9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA7D6DED1EBA06A400F01BD9 /* NetworkClient.swift */,
+				EA7D6DEF1EBA09A200F01BD9 /* StatusService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +335,10 @@
 				EA7D6DEA1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_ResponseSchema.m in Sources */,
 				E2B4915C1EB47C8B00DA6D34 /* ForgotPasswordViewController.swift in Sources */,
 				E2B4914E1EB479EB00DA6D34 /* AWSMobileClient.swift in Sources */,
+				EA7D6DF21EBA0E7300F01BD9 /* StatusService.swift in Sources */,
 				EA1AD4F51EB4A09200EDB4AF /* AuthService.swift in Sources */,
 				EA7D6DEB1EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_StatusMobileHubClient.m in Sources */,
+				EA7D6DF11EBA0E6700F01BD9 /* NetworkClient.swift in Sources */,
 				E2772F771EB3342C00A3EC9C /* AppDelegate.swift in Sources */,
 				EA7D6DE91EB9EF9D00F01BD9 /* AWSAPI_XLR0MEGJXL_RequestSchema.m in Sources */,
 				E2B491501EB479EB00DA6D34 /* RatedItems.swift in Sources */,

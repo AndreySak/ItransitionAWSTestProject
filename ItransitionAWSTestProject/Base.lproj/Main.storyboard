@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-b3-kp8">
-                                <rect key="frame" x="94" y="188.5" width="187.5" height="290.5"/>
+                                <rect key="frame" x="94" y="166" width="187.5" height="335.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObV-7M-K6i">
                                         <rect key="frame" x="48.5" y="0.0" width="91" height="20.5"/>
@@ -66,6 +66,13 @@
                                         <state key="normal" title="Register"/>
                                         <connections>
                                             <action selector="signUpAction" destination="E6w-Xa-l4m" eventType="touchUpInside" id="nwW-Ol-5Dw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-8A-sxu">
+                                        <rect key="frame" x="70" y="305.5" width="48" height="30"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="logout" destination="E6w-Xa-l4m" eventType="touchUpInside" id="pvC-ii-EDx"/>
                                         </connections>
                                     </button>
                                 </subviews>
