@@ -30,9 +30,9 @@ class NetworkClient {
     init() {
         let serviceConfiguration = AWSServiceConfiguration(region: AWSCloudLogicDefaultRegion, credentialsProvider: AWSIdentityManager.default().credentialsProvider)
 
-        AWSAPI_XLR0MEGJXL_StatusMobileHubClient.register(with: serviceConfiguration!, forKey: AWSCloudLogicDefaultConfigurationKey)
+        ITRAPROJECTNewClient.registerClient(withConfiguration: serviceConfiguration!, forKey: AWSCloudLogicDefaultConfigurationKey)
 
-        manager = AWSAPI_XLR0MEGJXL_StatusMobileHubClient(forKey: AWSCloudLogicDefaultConfigurationKey)
+        manager = ITRAPROJECTNewClient.client(forKey: AWSCloudLogicDefaultConfigurationKey)
 
         httpHeaders = [
             "Content-Type": "application/json",

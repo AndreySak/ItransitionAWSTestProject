@@ -14,14 +14,16 @@
  */
  
 
-#import "AWSAPI_XLR0MEGJXL_RequestSchema.h"
+import Foundation
+import AWSCore
 
-@implementation AWSAPI_XLR0MEGJXL_RequestSchema
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
-             @"request": @"request"
-             };
+ 
+public class Empty : AWSModel {
+    
+    
+   	public override static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]!{
+		var params:[AnyHashable : Any] = [:]
+		
+        return params
+	}
 }
-
-@end

@@ -14,13 +14,5 @@
  */
  
 
-#import <Foundation/Foundation.h>
-#import <AWSCore/AWSCore.h>
 
- 
-@interface AWSAPI_XLR0MEGJXL_ResponseSchema : AWSModel
-
-@property (nonatomic, strong, nonnull) NSString *response;
-
-
-@end
+#import "AWSApiGatewayBridge.h"
