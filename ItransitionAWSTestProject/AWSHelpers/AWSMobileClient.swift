@@ -94,6 +94,7 @@ class AWSMobileClient: NSObject {
             isInitialized = true
         }
 
+
         return didFinishLaunching
     }
     

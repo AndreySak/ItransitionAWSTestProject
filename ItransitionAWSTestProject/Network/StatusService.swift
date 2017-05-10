@@ -16,7 +16,7 @@ class StatusService {
     }
 
     public func getStatus(success: @escaping success<String>, failure: @escaping failure<Error>) {
-        networkClient.get(urlString: "/wow", success: success, failure: failure)
+        networkClient.get(urlString: "/api/devices", success: success, failure: failure)
     }
 
 }

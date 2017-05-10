@@ -20,6 +20,27 @@ class SignInViewController: UIViewController {
     var passwordAuthenticationCompletion: AWSTaskCompletionSource<AnyObject>?
 
     override func viewDidLoad() {
+        let defaultServiceManager: AWSServiceManager = AWSServiceManager.default()
+
+        let userPoolServiceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(region: .USEast1,
+                                                                                            credentialsProvider: nil)
+        let userIdentityPoolConfiguration: AWSCognitoIdentityUserPoolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: AWSCognitoUserPoolAppClientId,
+                                                                                                                             clientSecret: AWSCognitoUserPoolClientSecret,
+                                                                                                                             poolId: AWSCognitoUserPoolId)
+        AWSCognitoIdentityUserPool.register(with: userPoolServiceConfiguration,
+                                            userPoolConfiguration: userIdentityPoolConfiguration,
+                                            forKey: AWSCognitoUserPoolId)
+        let userPool: AWSCognitoIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolId)
+
+        let credentialsProvider: AWSCognitoCredentialsProvider = AWSCognitoCredentialsProvider(regionType: AWSCognitoUserPoolRegion,
+                                                                                               identityPoolId: "eu-central-1:a29cf6c7-82a8-47f2-aeff-64d43380b2ae",
+                                                                                               identityProviderManager: userPool)
+        let serviceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(region: .USEast1,
+                                                                                    endpoint: AWSEndpoint(urlString: "https://7ucv6txl1a.execute-api.eu-central-1.amazonaws.com/dev"),
+                                                                                    credentialsProvider: credentialsProvider)
+
+        defaultServiceManager.defaultServiceConfiguration = serviceConfiguration
+
         AWSCognitoUserPoolsSignInProvider.sharedInstance().setInteractiveAuthDelegate(AuthService.sharedInstance)
 
         super.viewDidLoad()
@@ -50,6 +71,7 @@ class SignInViewController: UIViewController {
     @IBAction func logout() {
         AWSSignInManager.sharedInstance().logout { [weak self] (any, state, error) in
             print(state)
+            AWSCognitoUserPoolsSignInProvider.sharedInstance().getUserPool().clearAll()
             self?.reloadHelloLabel()
         }
     }
@@ -62,7 +84,7 @@ class SignInViewController: UIViewController {
         email.name = "email"
         email.value = "wow@wow.by"
 
-        AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey).signUp("wow", password: "123456", userAttributes: [email], validationData: nil).continueWith { [weak self] (task: AWSTask<AWSCognitoIdentityUserPoolSignUpResponse>) -> AnyObject? in
+        AWSCognitoIdentityUserPool.default().signUp("wow", password: "123456", userAttributes: [email], validationData: nil).continueWith { [weak self] (task: AWSTask<AWSCognitoIdentityUserPoolSignUpResponse>) -> AnyObject? in
 
             self?.reloadHelloLabel()
 

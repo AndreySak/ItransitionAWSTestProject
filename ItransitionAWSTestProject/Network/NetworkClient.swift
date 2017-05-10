@@ -25,31 +25,48 @@ typealias failure<T> = (_ error: T) -> ()
 class NetworkClient {
 
     private let manager: AWSAPIGatewayClient
-    private var httpHeaders: [String: String]
+    private var httpHeaders: [String: Any]
 
     init() {
-        let serviceConfiguration = AWSServiceConfiguration(region: AWSCloudLogicDefaultRegion, credentialsProvider: AWSIdentityManager.default().credentialsProvider)
+        let defaultServiceManager: AWSServiceManager = AWSServiceManager.default()
 
-        ITRAPROJECTNewClient.registerClient(withConfiguration: serviceConfiguration!, forKey: AWSCloudLogicDefaultConfigurationKey)
+        let userPoolServiceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(region: .USEast1,
+                                                                                            credentialsProvider: nil)
+        let userIdentityPoolConfiguration: AWSCognitoIdentityUserPoolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: AWSCognitoUserPoolAppClientId,
+                                                                                                                             clientSecret: AWSCognitoUserPoolClientSecret,
+                                                                                                                             poolId: AWSCognitoUserPoolId)
+        AWSCognitoIdentityUserPool.register(with: userPoolServiceConfiguration,
+                                            userPoolConfiguration: userIdentityPoolConfiguration,
+                                            forKey: AWSCognitoUserPoolId)
+        let userPool: AWSCognitoIdentityUserPool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolId)
 
-        manager = ITRAPROJECTNewClient.client(forKey: AWSCloudLogicDefaultConfigurationKey)
+        let credentialsProvider: AWSCognitoCredentialsProvider = AWSCognitoCredentialsProvider(regionType: AWSCognitoUserPoolRegion,
+                                                                                               identityPoolId: "eu-central-1:a29cf6c7-82a8-47f2-aeff-64d43380b2ae",
+                                                                                               identityProviderManager: userPool)
+        let serviceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(region: .USEast1,
+                                                                                    endpoint: AWSEndpoint(urlString: "https://7ucv6txl1a.execute-api.eu-central-1.amazonaws.com/dev"),
+                                                                                    credentialsProvider: credentialsProvider)
+
+        TESTPROD1NewsClient.registerClient(withConfiguration: serviceConfiguration, forKey: AWSCloudLogicDefaultConfigurationKey)
+
+        manager = TESTPROD1NewsClient.client(forKey: AWSCloudLogicDefaultConfigurationKey)
+
 
         httpHeaders = [
-            "Content-Type": "application/json",
+            "Content-Type222": "application/json",
             "Accept": "application/json"
         ]
     }
 
     func request(urlString: String, method: HTTPMethod, parameters: [String: String]) -> AWSTask<AWSAPIGatewayResponse> {
 
-       // let httpBody = "{ \n  \"key1\":\"value1\", \n  \"key2\":\"value2\", \n  \"key3\":\"value3\"\n}"
-
         // Construct the request object
         let apiRequest = AWSAPIGatewayRequest(httpMethod: method.rawValue,
                                               urlString: urlString,
-                                              queryParameters: nil,
+                                              queryParameters: ["api-version":"2.2"],
                                               headerParameters: httpHeaders,
                                               httpBody: nil)
+        
 
         return manager.invoke(apiRequest)
     }
