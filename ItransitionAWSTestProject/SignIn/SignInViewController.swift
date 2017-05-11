@@ -8,6 +8,7 @@
 
 import UIKit
 import AWSCognitoUserPoolsSignIn
+import AWSAPIGateway
 
 class SignInViewController: UIViewController {
 
@@ -46,6 +47,13 @@ class SignInViewController: UIViewController {
         })
     }
 
+    @IBAction func logout() {
+        AWSSignInManager.sharedInstance().logout { [weak self] (any, state, error) in
+            print(state)
+            self?.reloadHelloLabel()
+        }
+    }
+
     @IBAction func signUpAction() {
         guard let email = AWSCognitoIdentityUserAttributeType() else {
             return
@@ -62,7 +70,17 @@ class SignInViewController: UIViewController {
         }
     }
 
+    @IBAction func apiAction() {
+        let statusService = StatusService(networkClient: NetworkClient())
 
-    
-
+        statusService.getStatus(success: { [weak self] status in
+            DispatchQueue.main.async {
+                self?.helloLabel.text = "Status: \(status)"
+            }
+        }, failure: { [weak self] error in
+            DispatchQueue.main.async {
+                self?.helloLabel.text = "Error: \(error)"
+            }
+        })
+    }
 }
